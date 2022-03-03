@@ -43,6 +43,9 @@ document.querySelector("#book-form").addEventListener("submit", function(e) {
 
         // add book to myLibrary
         myLibrary.push(book);
+
+        // clear input fields
+        clearFields();
     }
 });
 
@@ -69,6 +72,13 @@ function removeBook(value) {
     if (value.className === "delete") {
         value.parentElement.parentElement.remove();
     }
+}
+
+// clear input fields
+function clearFields() {
+    document.querySelector("#title").value = '';
+    document.querySelector("#author").value = '';
+    document.querySelector("#read").value = '';
 }
 
 document.querySelector(".book-list").addEventListener("click", function(e) {
