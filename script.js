@@ -26,7 +26,7 @@ const book = myLibrary.map((book) => {
 
 document.querySelector("#book-form").addEventListener("submit", function(e) {
     e.preventDefault();
-    
+
     const title = document.querySelector("#title").value;
     const author = document.querySelector("#author").value;
     const read = document.querySelector("#read").value;
@@ -43,12 +43,8 @@ document.querySelector("#book-form").addEventListener("submit", function(e) {
 
         // add book to myLibrary
         myLibrary.push(book);
-}
-})
-
-
-
-
+    }
+});
 
 // display book
 function addBookToList(book) {
@@ -62,8 +58,20 @@ function addBookToList(book) {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.read}</td>
-    `
+        <td><a href="#" class="delete">Remove</td>
+    `;
+
     tbody.appendChild(row);
 }
 
 // remove book
+function removeBook(value) {
+    if (value.className === "delete") {
+        value.parentElement.parentElement.remove();
+    }
+}
+
+document.querySelector(".book-list").addEventListener("click", function(e) {
+    // call the removeBook function
+    removeBook(e.target);
+});

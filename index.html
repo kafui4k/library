@@ -9,12 +9,18 @@
 <body>
     <h1>Library</h1>
     <form action="#" id="book-form">
-        <label for="title">Book Title</label>
-        <input type="text" name="title" id="title">
-        <label for="author">Book Author</label>
-        <input type="text" name="author" id="author">
-        <label for="read">Read?</label>
-        <input type="text" name="read" id="read">
+        <div class="form-grou">
+            <label for="title">Book Title</label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div class="form-group">
+            <label for="author">Book Author</label>
+            <input type="text" name="author" id="author">
+        </div>
+        <div class="form-group">
+            <label for="read">Read it?</label>
+            <input type="text" name="read" id="read">
+        </div>
         <input type="submit" value="Add Book">
     </form>
 
@@ -24,6 +30,7 @@
                 <th>Title</th>
                 <th>Author</th>
                 <th>Read?</th>
+                <th></th>
             </tr>
         </thead>
         <tbody class="book-list"></tbody>
