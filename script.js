@@ -24,24 +24,31 @@ const book = myLibrary.map((book) => {
     addBookToList(book);
 });;
 
-// add a new book
-const title = prompt("Book Title", "");
-const author = prompt("Author name", "");
-const read = prompt("Read?", "");
+document.querySelector("#book-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const title = document.querySelector("#title").value;
+    const author = document.querySelector("#author").value;
+    const read = document.querySelector("#read").value;
 
-// validate user input
-if (title === "" || author === "" || read === "") {
-    alert("please provide input for all fields.")
-} else {
-    // create new book
-    const book = new Book(title, author, read);
+    // validate user input
+    if (title === "" || author === "" || read === "") {
+        alert("please provide input for all fields.")
+    } else {
+        // create new book copy
+        const book = new Book(title, author, read);
 
-    // add book to displayBookList
-    addBookToList(book);
+        // add book to displayBookList
+        addBookToList(book);
 
-    // add book to myLibrary
-    myLibrary.push(book);
+        // add book to myLibrary
+        myLibrary.push(book);
 }
+})
+
+
+
+
 
 // display book
 function addBookToList(book) {
