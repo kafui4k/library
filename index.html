@@ -7,35 +7,35 @@
     <title>Library | Odin Project</title>
 </head>
 <body>
-    <h1>Library</h1>
-    <form action="#" id="book-form">
-        <div class="form-grou">
-            <label for="title">Book Title</label>
-            <input type="text" name="title" id="title">
-        </div>
-        <div class="form-group">
-            <label for="author">Book Author</label>
-            <input type="text" name="author" id="author">
-        </div>
-        <div class="form-group">
-            <label for="read">Read it?</label>
-            <input type="text" name="read" id="read">
-        </div>
-        <input type="submit" value="Add Book">
-    </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Read?</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody class="book-list"></tbody>
-    </table>
-
+    <div class="wrapper">
+        <h1 class="header">Library</h1>
+        <form action="#" id="book-form">
+            <div class="form-grou">
+                <label for="title">Book Title</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="form-group">
+                <label for="author">Book Author</label>
+                <input type="text" name="author" id="author">
+            </div>
+            <div class="form-group">
+                <label for="read">Read it?</label>
+                <input type="text" name="read" id="read">
+            </div>
+            <input type="submit" value="Add Book">
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Read?</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="book-list"></tbody>
+        </table>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
