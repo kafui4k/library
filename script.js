@@ -10,12 +10,12 @@ let myLibrary = [
     {
         title: "The Atomic Habits",
         author: "James Clear",
-        read: false
+        read: "Not Yet"
     },
     {
         title: "Steal like an Artiset",
         author: "Unknown",
-        read: false
+        read: "Not Yet"
     }
 ];
 
@@ -33,7 +33,7 @@ document.querySelector("#book-form").addEventListener("submit", function(e) {
 
     // validate user input
     if (title === "" || author === "" || read === "") {
-        showAlerts("please provide input for all fields.", 'danger');
+        showAlerts("please provide input for all fields.", "danger");
     } else {
         // create new book copy
         const book = new Book(title, author, read);
@@ -87,12 +87,12 @@ function clearFields() {
 // showAlerts for actions
 function showAlerts(message, className) {
     const div = document.createElement('div');
-        div.className = `alert alert-${className}`;
-        div.appendChild(document.createTextNode(message));
+    div.className = `alert alert-${className}`;
+    div.appendChild(document.createTextNode(message));
     
-    const wrapper = document.querySelector(".wrapper");
+    const aside = document.querySelector(".aside");
     const form = document.querySelector("#book-form");
-    wrapper.insertBefore(div, form);
+    aside.insertBefore(div, form);
 
     // remove alert after a second
     setTimeout(() => document.querySelector(".alert").remove(), 1000);
