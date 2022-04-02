@@ -11,24 +11,24 @@
 <body>
     <div class="wrapper">
         <div class="header">
-            <h1>My Library | Collections</h1>
+            <h1>Library</h1>
         </div>
         <div class="aside">
-            <form action="#" id="book-form">
-                <div class="form-group">
+            <form id="book-form" novalidate>
+                <div class="form-group group1">
                     <label for="title">Book Title</label>
-                    <input type="text" name="title" id="title">
+                    <input type="text" name="title" id="title" required minlength="6">
                 </div>
-                <div class="form-group">
+                <div class="form-group group2">
                     <label for="author">Book Author</label>
-                    <input type="text" name="author" id="author">
+                    <input type="text" name="author" id="author" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group group3">
                     <label for="read">Read it?</label>
-                    <input type="text" name="read" id="read">
+                    <input type="text" name="read" id="read" required>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Add Book">
+                    <button>submit</button>
                 </div>
             </form>
         </div>
@@ -46,6 +46,6 @@
             </table>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </body>
 </html>
